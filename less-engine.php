@@ -5,6 +5,7 @@
 	url: http://q21.co/simple-less
 	description: a simple way to use LESS in your theme.  Just activate this plugin and add a "theme.less" file to your theme's root and your off to the races. 
 	plugin uri: http://q21.co/simple-less
+	version: 0.1.0
 */
 
 define('LE_VER', '002');
