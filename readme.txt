@@ -37,10 +37,16 @@ the directory of the stable readme.txt, so in this case, `/tags/4.3/screenshot-1
 
 == Changelog ==
 
+= 0.1.1 =
+Clean up the plugin file, remove comments etc. 
+
 = 0.1.0 =
 * Initial Release.
 
 == Upgrade Notice ==
+
+= 0.1.1 =
+Makes the php cleaner.
 
 = 0.1.0 =
 Start using the plugin.
