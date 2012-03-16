@@ -5,34 +5,14 @@
 	url: http://q21.co/simple-less
 	description: a simple way to use LESS in your theme.  Just activate this plugin and add a "theme.less" file to your theme's root and your off to the races. 
 	plugin uri: http://q21.co/simple-less
-	version: 0.1.0
+	version: 0.1.1
 */
 
-define('LE_VER', '002');
-define('LE_TRANS_VER', '002');
+define('LE_VER', '011');
+define('LE_TRANS_VER', '011');
 define('LE_DIR', WP_PLUGIN_DIR.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)));
 define('LE_URL', WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)));
 define('LE_THEME_URL', get_stylesheet_directory_uri() );
-
-//add_action('init', 'less_register_stuff');
-//add_action('wp_print_scripts', 'less_enqueue_js');
-//add_action('wp_print_styles', 'less_enqueue_css');
-//we know, we're purposefully _doint_it_wrong for now. :-(
-
-
-function less_register_stuff() {
-	wp_register_script('lessjs', LE_URL . 'less-1.2.0.js', array(), LE_TRANS_VER, false);
-	wp_register_style('lesscss', LE_URL .'style.less', array(), LE_TRANS_VER, 'all');
-    
-}
-
-function less_enqueue_js() {
-	wp_enqueue_script('lessjs');
-}
-
-function less_enqueue_css() {
-	wp_enqueue_style('lesscss');
-}
 
 add_action('wp_head', 'less_js_old_way');
 function less_js_old_way() {
