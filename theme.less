@@ -1,0 +1,55 @@
+/*
+* LESS makes writing CSS a bit easier
+*/
+
+/*
+* Create some variables
+*/
+
+@primaryColor:      #C0FFEE;
+@secondaryColor:    #FFE7CO;
+@accentColor:	    #FFC0CC;
+@paddingSize:	    10px;
+
+/*
+* Define some mixin variables
+*/
+
+.padding {
+	padding:@paddingSize;
+}
+.dottedBottom {
+	border-bottom: 1px solid @accentColor;
+}
+
+/*
+* Make a nested rule
+*/
+
+p {
+	color: @primaryColor;
+	a {
+		color: @secondaryColor;
+	}
+}
+
+.widget {
+	.paddding /*use out mixin*/
+	p {
+		color: @secondaryColor;
+		a {
+			.dottedBottom;
+			color:@accentColor;
+			text-decoration:none;
+		}
+	}
+}
+
+/*
+* A little bonus function for ya
+*/
+
+ul {
+	padding: @paddingSize * 0; //sets it to zero
+	padding-left: @paddingSize * 2; //sets the padding left to twice the @paddingSize value
+}
